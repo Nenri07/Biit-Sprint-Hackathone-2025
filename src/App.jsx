@@ -1,32 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import SignUpPage from './pages/Signup'
+import LoginPage from './pages/loginpage'
 
 function App() {
-
   return (
-    <>
-      <div>
-    <div className="card card-sm bg-base-200 max-w-60 shadow">
-  <figure className="hover-gallery">
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title flex justify-between">
-      daisyUI Hat
-      <span className="font-normal">$25</span>
-    </h2>
-    <p>High Quality classic cap hat with stitch logo</p>
-  </div>
-</div>
-      </div>
-
-
-    </>
+    <Routes>
+      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/" element={<SignUpPage />} />
+    </Routes>
   )
 }
 
